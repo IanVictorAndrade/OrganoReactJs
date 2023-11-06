@@ -4,12 +4,9 @@ import './CampoTexto.css'
 const CampoTexto = (props) => {
 
     const placeholderModificada = `${props.placeholder}...` 
-    const [valor, setValor] = useState('')
-
 
     const Digitado = (evento) => {
-        setValor(evento.target.value)
-        console.log(valor)
+        props.Alterado(evento.target.value)
     }
 
 
